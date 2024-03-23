@@ -129,13 +129,13 @@
         {
             "id": 24,
             "nombre": "Pay de Queso",
-            "costo": 7.00,
+            "costo": 10.00,
             "imagen": "paydequeso.jpeg"
         },
         {
             "id": 25,
             "nombre": "Pay de Queso con Zarzamora",
-            "costo": 7.00,
+            "costo": 10.00,
             "imagen": "paydequesoconzarzamora.jpeg"
         },
         {
