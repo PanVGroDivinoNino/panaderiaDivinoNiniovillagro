@@ -79,12 +79,6 @@
             "imagen": "volovan.png"
         },
         {
-            "id": 14,
-            "nombre": "Zarzamora con Queso",
-            "costo": 7.00,
-            "imagen": "zarzamoraconqueso.png"
-        },
-        {
             "id": 15,
             "nombre": "Empanada de arroz",
             "costo": 8.00,
