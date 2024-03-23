@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería San Miguel</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./resources/images/logo.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="div-icon-slide-bolsita" onclick="openCloseModalBolsita('open')">
+        <img width="40" height="40" src="./resources/icons/iconoBolsita.svg" alt="BOLSITA">
+        <div class="div-counter-items dci2">0</div>
+    </div>
+
+   
+
+    <!--MODAL PARA AGREGAR UN PRODUCTO A LA BOLSITA-->
+    <div class="div-mask dm1">
+        <div class="modal-add madd1">
+            <div class="header-modal">
+                <p id="nombre-producto-add"></p>
+                <img width="20px" onclick="openCloseModalAdd('close')" height="20px" src="./resources/icons/iconClose.svg" alt="CERRAR" class="close">
+            </div>
+            <div class="body-modal">
+                <p class="description-modal" id="descripcion-producto-add"></p>
+
+                <div class="div-counter-pz">
+                    <input class="counter" type="number" min="1" value="1">
+                    <div class="buttons-counter">
+                        <div class="button-counter" onclick="increaseDecreaseAdd('decrease')">
+                            <img width="30px" height="30px" src="./resources/icons/removeBlack.svg" alt="DISMINUIR">
+                        </div>
+                        <div class="button-counter" onclick="increaseDecreaseAdd('increase')" >
+                            <img width="30px" height="30px" src="./resources/icons/addBlack.svg" alt="AUMENTAR" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-modal">
+                <div class="button-add-modal" onclick="agregarProductoALocalStorage()">
+                    <p>AGREGAR</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!--MODAL PARA MOSTRAR PRODUCTOS DE LA BOLSITA-->
+     <div class="div-mask dm2">
+        <div class="modal-add madd">
+            <div class="header-modal">
+             
+                <p>BOLSITA</p>
+                
+                <img width="20px" onclick="openCloseModalBolsita('close')" height="20px" src="./resources/icons/iconClose.svg" alt="CERRAR" class="close">
+            </div>
+            <div class="body-modal">
+                <img class="icon-bolsita" width="80px" height="80px" src="./resources/icons/iconoBolsita.svg" alt="ICONO BOLSITA">
+                <p class="description-modal">Estos son tus productos que haz <br> agregado a tu bolsita</p>
+
+                <div class="div-payment">
+                    <p><b id="totalPay"></b></p>
+                </div>
+                <p class="emptyList">NO TIENES PRODUCTOS EN TU BOLSITA</p>
+                <div class="div-pzsa">
+                  
+                    <!--<div class="pza-rep">
+                        <img class="img-pza" width="50px" height="50px" src="./resources/images/reposteria/conchitas.webp" alt="PIEZA">
+                        <p>Polvorones</p>
+                        <p>15 pz</p>
+                        <div class="buttons-counter">
+                            <div class="button-counter btncounte">
+                                <img width="20px" height="20px" src="./resources/icons/removeBlack.svg" alt="DISMINUIR">
+                            </div>
+                            <div class="button-counter btncounte">
+                                <img width="20px" height="20px" src="./resources/icons/addBlack.svg" alt="AUMENTAR" >
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <div class="footer-modal fottm">
+                <div onclick="openCloseModalBolsita('close')" class="button-add-modal btnaddmclose">
+                    <p>CERRAR</p>
+                </div>
+                <div class="button-add-modal btmakeorder" onclick="sendPedido()">
+                    <p>PEDIR</p>
+                    <img width="20px" height="20px" src="./resources/icons/iconWhatsApp.svg" alt="WHATSAPP">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <header class="header">
+        <img class="icon-responsive" src="./resources/images/logo.png" alt="LOGO">
+    <input type="checkbox" name="closemenu" id="closemenu">
+    <label for="closemenu" class="div-menu-hamburguer" nclick="clickCheckMenu()">
+        <img width="30px" height="30px" src="./resources/icons/iconMenu.svg" alt="MENU">
+    </label>
+    <div class="mask-responsive"></div>
+        <nav class="navbar">
+            
+            <label for="closemenu" class="times-button">
+                <img width="20px" height="20px" src="./resources/icons/iconCloseBlack.svg" alt="CERRAR" class="close">
+            </label>
+            
+            <div class="icon-div">
+                <img src="/resources/images/logo.png" alt="LOGO">
+            </div>
+            <ul class="list">
+                <li>
+                    <a onclick="clickCheckMenu()" href="#reposteria">RESPOSTERIA</a>
+                </li>
+                <li>
+                    <a onclick="clickCheckMenu()" href="#contacto">CONTACTO</a>
+                </li>
+                <li>
+                    <a onclick="clickCheckMenu()" href="#horarios">HORARIOS</a> 
+                </li>
+                <li>
+                    <a onclick="clickCheckMenu()" href="#ubicacion">UBICACIÓN</a>
+                </li>
+                <li class="li-bolsita" onclick="openCloseModalBolsita('open')">
+                    <label for="closemenu">
+                        <img width="40" height="40" src="./resources/icons/iconoBolsita.svg" alt="BOLSITA">
+                    <div class="div-counter-items dci3">0</div>
+                    </label>
+                    
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    
+
+    <div class="presentation">
+        <div class="div-left-presentation">
+            <div class="icon-left-presentation">
+                <img src="./resources/images/logo.png" alt="LOGO">
+            </div>
+            <h1 class="title">PANADERIA DIVINO NIÑO</h1>
+            <p class="description-presentation">
+                ¡Bienvenido a la Panadería Tradicional de Villa Guerrero! Sumérgete en la autenticidad de nuestros panes recién horneados y descubre el sabor único de nuestras especialidades locales.
+            </p>
+            <div class="button-make-order" onclick="navigatedLink('#reposteria')">
+                <p>Realizar pedido</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="news">
+        <img id="imagenpresentacion" src="./resources/images/#" alt="NOTICIA">
+    </div>
+
+    <div class="reposteria">
+        <div class="subtitle" id="reposteria">
+            <hr class="line-middel">
+            <div class="div-subtitle-square">
+                <h2>REPOSTERIA</h2>
+            </div>
+        </div>
+
+        <div class="reposteria-piezas">
+            <!--DATA AQUI-->
+        </div>
+
+        <div class="subtitle">
+            <hr class="line-middel">
+            <div class="div-subtitle-square">
+                <h2>REPOSTERIA <br> POR ENCARGO</h2>
+            </div>
+        </div>
+
+        <div class="div-respoteria-encargo"></div>
+
+
+        <div class="subtitle sbt2">
+            <hr class="line-middel">
+            <div class="div-subtitle-square">
+                <h2>INFORMACION</h2>
+            </div>
+        </div>
+
+        <div class="div-information">
+            <div class="product">
+                <div class="div-footer-product dfp2" id="contacto">
+                    <p>CONTACTANOS</p>
+
+                    <div class="media-contact">
+                        <img width="30px" height="30px" src="./resources/icons/iconFacebook.svg" alt="FACEBOOK">
+                        <small class="small-text"><a id="sectionFacebook" target="_blank" href="#">Facebook | Panadería Divino Niño</a></small>
+                        <img width="30px" height="30px" src="./resources/icons/iconemail.svg" alt="EMAIL">
+                        <small class="small-text"><a id="emailsection" href="#">villaGroPanaderiaSanMiguel.com</a></small>
+                        <img width="30px" height="30px" src="./resources/icons/iconWhatsApp.svg" alt="WHATSAPP">
+                        <small class="small-text"><a id="numtelsection" target="_blank" href="#">+7223456778</a></small> 
+                       
+                    </div>
+                </div>
+                <div class="image-product">
+                    <img src="./resources/images/contactus (2).webp" alt="CONTACTANOS">
+                </div>
+                
+            </div>
+            <div class="product">
+                <div class="div-footer-product dfp2" id="ubicacion">
+                    <p>UBICANOS</p>
+
+                    <div class="media-contact">
+                        <img width="30px" height="30px" src="./resources/icons/iconLocation.svg" alt="UBICACION">
+                        <small  class="small-text"><a id="locationsectioninformation" target="_blank" href="#">Calle Niños herores Calz, Geuerrero. Mex. Edo Mex. CP: 51760 <br> Click para ver en Google Maps</a></small>
+                    </div>
+                </div>
+                <div class="image-product">
+                    <img src="./resources/images/location.webp" alt="UBICANOS">
+                </div>
+                
+            </div>
+            <div class="product">
+                <div class="div-footer-product dfp2" id="horarios">
+                    <p>HORARIOS DE ATENCION</p>
+
+                    <div class="media-contact">
+                        <img width="30px" height="30px" src="./resources/icons/iconoHorario.svg" alt="HORARIOS DE ATENCION">
+                        <small class="small-text"><b>Lunes - Viernes</b></small>
+                        <small id="horarioslunesviernes" class="small-text">6:00 am - 9:00 pm</small>
+                        <br>
+                        <small class="small-text"><b>Sabados y Domingos</b></small>
+                        <small id="horariossabadodomingo" class="small-text">11:00 am - 3:00 pm</small>
+                    </div>
+                </div>
+                <div class="image-product">
+                    <img src="./resources/images/horarios.webp" alt="HORARIOS DE ATENCION">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="div-three-column">
+           <div class="left">
+            <p>Panadería Divino Niño | 2024</p>
+            <div class="columns-panaderia">
+                <div class="div-column-logo">
+                    <img src="./resources/images/logo.png" alt="LOGO">
+                </div> 
+                <div class="div-icons-social-media">
+                    <div class="columns-icons">
+                        <img onclick="openLink('facebookPanaderia', 'link')" width="50px" height="50px" src="./resources/icons/iconFacebook.svg" alt="FACEBOOK">
+                        <img onclick="openLink('correoPanaderia', 'email')" width="50px" height="50px" src="./resources/icons/iconemail.svg" alt="EMAIL">
+                        <img onclick="openLink('telefonoSendWhatsApp', 'phone')" width="50px" height="50px" src="./resources/icons/iconWhatsApp.svg" alt="WHATSAPP">
+                    </div> 
+                </div>
+            </div>
+           </div>
+           <div class="center">
+                <img  src="./resources/icons/cuernito.svg" alt="CUERNITO">
+           </div>
+           <div class="right">
+            <p>&copy; Copyright | Página web desarrollada por <a target="_blank" href="https://www.facebook.com/profile.php?id=61556833364828">GN - DevWeb</a> | 2024 </p>
+            <div class="columns-panaderia cpr">
+              
+                <div class="div-icons-social-media">
+                    <div class="columns-icons">
+                        <img onclick="openLink('facebookPDGN', 'link')" width="50px" height="50px" src="./resources/icons/iconFacebook.svg" alt="FACEBOOK">
+                        <img onclick="openLink('correoPDGN', 'email')" width="50px" height="50px" src="./resources/icons/iconemail.svg" alt="EMAIL">
+                        <img onclick="openLink('telefonoPDGN', 'phone')" width="50px" height="50px" src="./resources/icons/iconWhatsApp.svg" alt="WHATSAPP">
+                        <!--<img onclick="openLink('instagramPDGN', 'link')" width="50px" height="50px" src="./resources/icons/iconInstagram.svg" alt="INSTAGRAM">-->
+                    </div>
+                </div>
+                <div class="div-column-logo dcia">
+                    <img src="./resources/icons/PDGN_logo.svg" alt="LOGO">
+                </div>
+            </div>
+           </div>
+        </div>
+    </footer>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+{
+    "reposteriaComun": [
+        {
+            "id": 1,
+            "nombre": "Conchas",
+            "costo": 6.00,
+            "imagen": "conchas.png"
+        },
+        {
+            "id": 2,
+            "nombre": "Dona Chocolate",
+            "costo": 8.00,
+            "imagen": "donaschocolate.png"
+        },
+        {
+            "id": 3,
+            "nombre": "Dona Azucarada",
+            "costo": 8.00,
+            "imagen": "donaazucarada.png"
+        },
+        {
+            "id": 4,
+            "nombre": "Dona de Moka",
+            "costo": 8.00,
+            "imagen": "donamoka.png"
+        },
+        {
+            "id": 5,
+            "nombre": "Cuerno relleno de Jamón",
+            "costo": 8.00,
+            "imagen": "cuernorelleno.png"
+        },
+        {
+            "id": 6,
+            "nombre": "Empanada Natilla casera",
+            "costo": 8.00,
+            "imagen": "empanadaNatilla.png"
+        },
+        {
+            "id": 7,
+            "nombre": "Pastel (Vidriosa)",
+            "costo": 7.00,
+            "imagen": "vidriosa.jpeg"
+        },
+        {
+            "id": 8,
+            "nombre": "Laurel",
+            "costo": 7.00,
+            "imagen": "laurel.png"
+        },
+        {
+            "id": 9,
+            "nombre": "Pasta hojaldrada",
+            "costo": 7.00,
+            "imagen": "pastahojaldrada.png"
+        },
+        {
+            "id": 10,
+            "nombre": "Banderillas",
+            "costo": 7.00,
+            "imagen": "banderilla.png"
+        },
+        {
+            "id": 11,
+            "nombre": "Barquillos",
+            "costo": 8.00,
+            "imagen": "barquillo.png"
+        },
+        {
+            "id": 12,
+            "nombre": "Palomas",
+            "costo": 7.00,
+            "imagen": "paloma.png"
+        },
+        {
+            "id": 13,
+            "nombre": "Volovanes",
+            "costo": 7.00,
+            "imagen": "volovan.png"
+        },
+        {
+            "id": 14,
+            "nombre": "Zarzamora con Queso",
+            "costo": 7.00,
+            "imagen": "zarzamoraconqueso.png"
+        },
+        {
+            "id": 15,
+            "nombre": "Empanada de arroz",
+            "costo": 8.00,
+            "imagen": "empanadadearroz.jpeg"
+        },
+        {
+            "id": 16,
+            "nombre": "Trenza de Higo",
+            "costo": 15.00,
+            "imagen": "trenzahigo.jpeg"
+        },
+        {
+            "id": 17,
+            "nombre": "Cuerno de Higo",
+            "costo": 15.00,
+            "imagen": "cuernonormal.png"
+        },
+        {
+            "id": 19,
+            "nombre": "Cuerno",
+            "costo": 6.00,
+            "imagen": "cuernonormal.png"
+        },
+        {
+            "id": 20,
+            "nombre": "Bigotes",
+            "costo": 6.00,
+            "imagen": "bigote.png"
+        },
+        {
+            "id": 21,
+            "nombre": "Corbata",
+            "costo": 6.00,
+            "imagen": "corbata.png"
+        },
+        {
+            "id": 22,
+            "nombre": "Rehilete",
+            "costo": 6.00,
+            "imagen": "rehiletes.png"
+        },
+        {
+            "id": 23,
+            "nombre": "Panquecito de Avena",
+            "costo": 7.00,
+            "imagen": "panquecitoAvena.jpeg"
+        },
+        {
+            "id": 24,
+            "nombre": "Pay de Queso",
+            "costo": 7.00,
+            "imagen": "paydequeso.jpeg"
+        },
+        {
+            "id": 25,
+            "nombre": "Pay de Queso con Zarzamora",
+            "costo": 7.00,
+            "imagen": "paydequesoconzarzamora.jpeg"
+        },
+        {
+            "id": 26,
+            "nombre": "Bolillo",
+            "costo": 6.00,
+            "imagen": "bolillo.webp"
+        },
+        {
+            "id": 27,
+            "nombre": "Baguette",
+            "costo": 6.00,
+            "imagen": "baguettee.jpeg"
+        }
+    ],
+    "reposteriaPedido": [
+        {
+            "id": 1000,
+            "nombre": "Pan de muerto",
+            "costo": 25.00,
+            "imagen": "pandemuerto.png"
+        },
+        {
+            "id": 1001,
+            "nombre": "Rosca de reyes chica",
+            "costo": 120.00,
+            "imagen": "roscareyesChica.png"
+        },
+        {
+            "id": 1002,
+            "nombre": "Rosca de reyes mediana",
+            "costo": 200.00,
+            "imagen": "roscareyesMediana.png"
+        },
+        {
+            "id": 1003,
+            "nombre": "Rosca de reyes grande",
+            "costo": 280.00,
+            "imagen": "roscareyesGrande.png"
+        }
+    ]
+}

@@ -1,2 +1,2 @@
-# panaderiaDivinoNiniovillagro
-Página web para panaderia dino niño en Villa Guerrero, Estado de México
+# panaderiaSanMiguel
+Página web para pedidos via WhatsApp
