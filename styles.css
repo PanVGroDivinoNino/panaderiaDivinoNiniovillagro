@@ -760,6 +760,14 @@ footer > .div-three-column > .center > img{
 
 }
 
+.small-text{
+    text-wrap: wrap;
+    width: 100%;
+    text-overflow: ellipsis;
+    font-size: 10px;
+    overflow: hidden;
+}
+
 /*RESPONSIVE PARA TABLETS*/
 @media screen and (max-width: 1160px) {
     .icon-div {
